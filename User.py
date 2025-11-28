@@ -58,6 +58,26 @@ class User:
 
 
 
-
 User_1 = User("John Brown", "jbrown@place.com", "12345")
 User_2 = User("Marcy Tree", "mtree@place.com", "12345")
+
+# John posts two items
+post_1 = User_1.add_post("First day with the new posts feature!")
+post_2 = User_1.add_post("Having a great time coding.")
+
+# Marcy posts one item
+post_3 = User_2.add_post("Hello World!")
+
+# Check sync and scope
+print(f"\n--- After Posting ---")
+print(f"John's Posts (Instance Scope): {len(User_1.user_posts)}") # Output: 2
+print(f"Marcy's Posts (Instance Scope): {len(User_2.user_posts)}") # Output: 1
+print(f"Total Posts (Class Scope): {len(User.all_posts)}")         # Output: 3
+
+# Demonstrate deletion (BONUS)
+print(f"\n--- Deletion Test ---")
+print(User_1.delete_post(post_2['post_id'])) 
+
+print(f"\n--- After Deleting Post ID 2 ---")
+print(f"John's Posts (Instance Scope): {len(User_1.user_posts)}") # Output: 1
+print(f"Total Posts (Class Scope): {len(User.all_posts)}")         # Output: 2
