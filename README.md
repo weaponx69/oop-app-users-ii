@@ -1,6 +1,6 @@
 # App Users II
 
-Wow!  Literally overnight, your \<INSERT APPLICATION NAME\> app has really taken off!  You decide to add a new feature to your app: posts.
+Wow!  Literally overnight, your App User app has really taken off!  You decide to add a new feature to your app: posts.
 
 In order to gain this new functionality, you'll have to modify your original `User` class.
 
